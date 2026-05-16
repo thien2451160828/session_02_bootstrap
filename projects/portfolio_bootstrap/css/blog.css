@@ -1,18 +1,18 @@
-/* Thiết lập thanh Sidebar ghim cố định khi cuộn màn hình Desktop */
+
 .sticky-top {
     position: sticky;
-    top: 100px; /* Nằm dưới khoảng cách của thanh Header định vị cố định */
+    top: 100px; 
     z-index: 1;
 }
 
-/* Kiểu dáng viền mềm mại và đổ bóng cho khối thẻ (Card Layout) */
+
 .card {
     border: none !important;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
 }
 
-/* Hiệu ứng phóng to nhẹ ảnh bài viết khi di chuột vào khối */
+
 .card-img-top {
     transition: transform 0.3s ease;
 }
