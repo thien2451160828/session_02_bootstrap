@@ -6,7 +6,9 @@
     <title>Blog - Trần Đức Thiện</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/custom-theme.css" rel="stylesheet">
     <link href="css/blog.css" rel="stylesheet">
+    <link href="css/comments.css" rel="stylesheet">
 </head>
 <body>
 
@@ -33,137 +35,128 @@
         </div>
     </nav>
 
-    <section class="py-5 bg-light border-bottom">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-2">Góc Chia Sẻ Công Nghệ</h1>
-            <p class="lead text-muted">Nhật ký học tập, phân tích hệ thống và phát triển phần mềm.</p>
-        </div>
-    </section>
+    <main class="container py-5">
+        <div class="row g-4">
+            
+            <div class="col-lg-8">
+                <article class="card mb-4 border-0 shadow-sm overflow-hidden">
+                    <img src="https://picsum.photos/800/400?random=25" class="card-img-top" alt="Featured Post">
+                    <div class="card-body p-4">
+                        <span class="badge bg-primary mb-2">Technology</span>
+                        <h2 class="card-title fw-bold">Xây dựng ứng dụng tìm đường đi ngắn nhất bằng đồ thị</h2>
+                        <p class="text-muted small">By Trần Đức Thiện • Jan 15, 2026 • 5 min read</p>
+                        <p class="card-text">Nội dung bài viết phân tích chi tiết quy trình phát triển và tối ưu hóa giao diện người dùng...</p>
+                    </div>
+                </article>
 
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4">
-                
-                <div class="col-lg-8">
-                    
-                    <article class="card mb-4 border-0 shadow-sm overflow-hidden">
-                        <img src="https://picsum.photos/800/400?random=21" class="card-img-top" alt="OOP C++">
-                        <div class="card-body p-4">
-                            <span class="badge bg-primary">Lập trình</span>
-                            <h3 class="card-title mt-2 fw-bold">Làm chủ tính đóng gói và con trỏ trong C++</h3>
-                            <p class="card-text text-muted small">By Trần Đức Thiện • May 12, 2026 • 5 min read</p>
-                            <p class="card-text">Chia sẻ các phương pháp quản lý bộ nhớ hiệu quả, tránh rò rỉ bộ nhớ khi làm việc với các hàm khởi tạo (constructor) và xử lý biến con trỏ trong lập trình hướng đối tượng.</p>
-                            <a href="#" class="btn btn-outline-primary">Đọc thêm</a>
+                <section class="comments-section mt-5" id="comments">
+                    <h5 class="fw-bold mb-4">3 Bình luận</h5>
+
+                    <div class="card mb-5 border-0 shadow-sm">
+                        <div class="card-header bg-white pt-3 border-bottom-0">
+                            <h5 class="fw-bold mb-0">Leave a Comment</h5>
                         </div>
-                    </article>
-
-                    <article class="card mb-4 border-0 shadow-sm overflow-hidden">
-                        <img src="https://picsum.photos/800/400?random=22" class="card-img-top" alt="A* Algorithm">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success">Thuật toán</span>
-                            <h3 class="card-title mt-2 fw-bold">Ứng dụng cấu trúc dữ liệu JSON vào trực quan thuật toán A*</h3>
-                            <p class="card-text text-muted small">By Trần Đức Thiện • May 05, 2026 • 7 min read</p>
-                            <p class="card-text">Hướng dẫn chi tiết cách tổ chức dữ liệu đồ thị bằng tệp tin JSON và triển khai thư viện NetworkX trong Python để vẽ đường đi ngắn nhất một cách trực quan.</p>
-                            <a href="#" class="btn btn-outline-primary">Đọc thêm</a>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label fw-semibold">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Tên của bạn" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label fw-semibold">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comment" class="form-label fw-semibold">Comment</label>
+                                    <textarea class="form-control" id="comment" rows="4" placeholder="Nội dung bình luận..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary px-4 py-2 fw-semibold">Post Comment</button>
+                            </form>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="card mb-4 border-0 shadow-sm overflow-hidden">
-                        <img src="https://picsum.photos/800/400?random=23" class="card-img-top" alt="System Analysis">
-                        <div class="card-body p-4">
-                            <span class="badge bg-warning text-dark">Phân tích hệ thống</span>
-                            <h3 class="card-title mt-2 fw-bold">Kinh nghiệm thiết kế Sơ đồ luồng dữ liệu (DFD) chuẩn chỉnh</h3>
-                            <p class="card-text text-muted small">By Trần Đức Thiện • April 28, 2026 • 6 min read</p>
-                            <p class="card-text">Phân tích các lỗi sai phổ biến về mặt cú pháp và ngữ nghĩa khi vẽ sơ đồ DFD cấp ngữ cảnh và cấp 0 cho các hệ thống quản lý đăng ký thông tin.</p>
-                            <a href="#" class="btn btn-outline-primary">Đọc thêm</a>
-                        </div>
-                    </article>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="sticky-top pt-2">
+                    <div class="comments-list">
                         
-                        <div class="card mb-4 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="fw-bold mb-3">Tìm kiếm</h5>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Tìm bài viết...">
-                                    <button class="btn btn-primary" type="button">Tìm</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-4 border-0 shadow-sm">
-                            <div class="card-header bg-white border-bottom-0 pt-3">
-                                <h5 class="fw-bold mb-0">Danh mục</h5>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-3">
-                                    Hệ thống thông tin
-                                    <span class="badge bg-primary rounded-pill">12</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-3">
-                                    Lập trình ứng dụng
-                                    <span class="badge bg-primary rounded-pill">8</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-3">
-                                    Phân tích thiết kế
-                                    <span class="badge bg-primary rounded-pill">5</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="card mb-4 border-0 shadow-sm">
-                            <div class="card-header bg-white border-bottom-0 pt-3">
-                                <h5 class="fw-bold mb-0">Bài viết gần đây</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex mb-3 align-items-center">
-                                    <img src="https://picsum.photos/60/60?random=31" class="rounded" width="60" height="60" alt="Recent post">
-                                    <div class="ms-3">
-                                        <h6 class="mb-1 fw-bold"><a href="#" class="text-dark text-decoration-none">Lập trình hướng đối tượng</a></h6>
-                                        <small class="text-muted">May 12, 2026</small>
+                        <div class="comment-item mb-4">
+                            <div class="d-flex">
+                                <img src="https://picsum.photos/50/50?random=41" class="rounded-circle me-3 comment-avatar" alt="Avatar">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h6 class="fw-bold mb-0">Anh Tuấn</h6>
+                                        <small class="text-muted">2 hours ago</small>
                                     </div>
-                                </div>
-                                <div class="d-flex mb-1 align-items-center">
-                                    <img src="https://picsum.photos/60/60?random=32" class="rounded" width="60" height="60" alt="Recent post">
-                                    <div class="ms-3">
-                                        <h6 class="mb-1 fw-bold"><a href="#" class="text-dark text-decoration-none">Cấu trúc dữ liệu JSON</a></h6>
-                                        <small class="text-muted">May 05, 2026</small>
+                                    <p class="text-secondary mb-2">Bài viết rất chi tiết và dễ hiểu! Thuật toán trực quan bằng hình ảnh giúp mình nắm bắt bài học nhanh hơn nhiều.</p>
+                                    <button class="btn btn-sm btn-link text-decoration-none p-0">
+                                        <i class="bi bi-reply-fill"></i> Reply
+                                    </button>
+
+                                    <div class="comment reply ms-5 mt-3">
+                                        <div class="d-flex">
+                                            <img src="https://picsum.photos/40/40?random=42" class="rounded-circle me-3 comment-avatar" alt="Avatar Author">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                                    <h6 class="fw-bold mb-0 text-primary">Author <span class="badge bg-info text-dark ms-1 p-1 fs- صغيرة" style="font-size: 0.65rem;">Tác giả</span></h6>
+                                                    <small class="text-muted">1 hour ago</small>
+                                                </div>
+                                                <p class="text-secondary mb-0">Cảm ơn bạn! Rất vui vì bài viết giúp ích được cho quá trình nghiên cứu cấu trúc dữ liệu đồ thị của bạn.</p>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card mb-4 border-0 shadow-sm">
-                            <div class="card-header bg-white border-bottom-0 pt-3">
-                                <h5 class="fw-bold mb-0">Thẻ từ khóa</h5>
+                        <div class="comment-item mb-4">
+                            <div class="d-flex">
+                                <img src="https://picsum.photos/50/50?random=43" class="rounded-circle me-3 comment-avatar" alt="Avatar">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h6 class="fw-bold mb-0">Minh Hải</h6>
+                                        <small class="text-muted">5 hours ago</small>
+                                    </div>
+                                    <p class="text-secondary mb-2">Bạn có thể chia sẻ thêm về cách tổ chức file JSON để tối ưu hóa việc đọc dữ liệu các đỉnh đồ thị được không?</p>
+                                    <button class="btn btn-sm btn-link text-decoration-none p-0">
+                                        <i class="bi bi-reply-fill"></i> Reply
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge bg-secondary">C++</span>
-                                    <span class="badge bg-secondary">Python</span>
-                                    <span class="badge bg-secondary">UML</span>
-                                    <span class="badge bg-secondary">JSON</span>
-                                    <span class="badge bg-secondary">C#</span>
-                                    <span class="badge bg-secondary">Bootstrap 5</span>
+                        </div>
+
+                        <div class="comment-item">
+                            <div class="d-flex">
+                                <img src="https://picsum.photos/50/50?random=44" class="rounded-circle me-3 comment-avatar" alt="Avatar">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h6 class="fw-bold mb-0">Phương Thảo</h6>
+                                        <small class="text-muted">1 day ago</small>
+                                    </div>
+                                    <p class="text-secondary mb-2">Giao diện web dùng Bootstrap nhìn mượt và tối ưu trên mobile tốt thật đấy.</p>
+                                    <button class="btn btn-sm btn-link text-decoration-none p-0">
+                                        <i class="bi bi-reply-fill"></i> Reply
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                </div>
+                </section>
 
             </div>
-        </div>
-    </section>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-0 text-muted">&copy; 2026 Trần Đức Thiện. All rights reserved.</p>
+            <div class="col-lg-4">
+                <div class="sticky-top pt-2">
+                    <div class="card p-3 bg-light border-0 shadow-sm text-center">
+                        <h5 class="fw-bold">Thông tin Sidebar</h5>
+                        <p class="small text-muted mb-0">Thanh điều hướng và danh mục bổ trợ cho bài viết.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </footer>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
